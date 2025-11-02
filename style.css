@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+  color: #0a0a0a;
+  font-weight: 500;
+}
+.header {
+  background-color: #fff;
+  color: #0a0a0a;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  height: 80px;
+  gap: 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  opacity: 0.95;
+}
+.header__title {
+  font-size: 18px;
+  line-height: 1.55rem;
+  font-weight: 400;
+}
+.header__title--nav {
+  display: none;
+}
+.header__title--no-nav {
+  display: block;
+}
+.header__nav {
+  display: none;
+  gap: 15px;
+}
+.header__button {
+  border-color: #0000001a;
+  border-radius: 8px;
+  color: #0a0a0a;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-weight: 500;
+  background-color: transparent;
+}
+.header__button:hover {
+  background-color: #f0f0f0;
+}
+.main {
+  padding: 80px 0;
+}
+.section__title {
+  color: #717182;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.main .main__header,
+.main .main__projects,
+.main .main__about,
+.main .main__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 0 24px;
+}
+.main .main__header {
+  padding: 0 32px;
+}
+.main .main__header .main__header__title {
+  font-size: 72px;
+  line-height: 72px;
+  font-weight: 400;
+  margin-bottom: 48px;
+}
+.main .main__header .main__header__title .main__header__highlight {
+  color: #717182;
+  font-size: inherit;
+  line-height: inherit;
+}
+.main .main__header .main__header__subtitle {
+  color: #717182;
+  font-size: 18px;
+  line-height: 1.625rem;
+}
+.main .main__projects,
+.main .main__about,
+.main .main__contact {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.main .main__projects {
+}
+.main .main__about {
+  background-color: #ececf04d;
+}
+.main .main__contact {
+  padding-bottom: 16px;
+}
+.footer {
+  padding: 0 24px;
+  color: #717182;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 80px;
+}
+.footer__content {
+  padding-top: 24px;
+  border-top: 1px solid #0000001a;
+}
+.footer__link {
+  font-weight: 400;
+  color: #717182;
+}
+@media only screen and (min-width: 541px) {
+  .header__title--nav {
+    display: block;
+  }
+  .header__title--no-nav {
+    display: none;
+  }
+  .header__nav {
+    display: flex;
+  }
+}
