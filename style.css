@@ -76,10 +76,24 @@ a {
   padding: 0 32px;
 }
 .main .main__header .main__header__title {
-  font-size: 72px;
+  font-family: "Poppins", sans-serif;
+  font-size: 64px;
   line-height: 72px;
   font-weight: 400;
   margin-bottom: 48px;
+}
+.main .main__header .main__header__title__area {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.main .main__header .main__header__image {
+  display: none;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: 12px 12px 24px #0000001a;
 }
 .main .main__header .main__header__title .main__header__highlight {
   color: #717182;
@@ -176,6 +190,13 @@ a {
   }
 }
 @media only screen and (min-width: 1025px) {
+  .main .main__header .main__header__image {
+    display: block;
+  }
+  .main .main__header .main__header__title {
+    font-size: 86px;
+    line-height: 96px;
+  }
   .main .main__projects .main__projects__content {
     display: flex;
     gap: 32px;
