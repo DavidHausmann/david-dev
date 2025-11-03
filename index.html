@@ -3,7 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>David WH | Portfólio de Desenvolvedor Front-End</title>
+    <title>David Hausmann | Desenvolvedor Front-End Especialista em Angular, React e JavaScript</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="David Hausmann - Desenvolvedor Front-End com mais de 4 anos de experiência em Angular, React, JavaScript e TypeScript. Especialista em criar interfaces web modernas, responsivas e acessíveis." />
+    <meta name="keywords" content="desenvolvedor front-end, Angular, React, JavaScript, TypeScript, HTML, CSS, desenvolvedor web, portfolio, David Hausmann, interface de usuário, UX/UI" />
+    <meta name="author" content="David William Hausmann" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="pt-BR" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="David Hausmann | Desenvolvedor Front-End Especialista" />
+    <meta property="og:description" content="Desenvolvedor Front-End com mais de 4 anos de experiência criando interfaces web modernas e responsivas. Especialista em Angular, React e JavaScript." />
+    <meta property="og:image" content="./assets/images/perfil.png" />
+    <meta property="og:url" content="https://davidhausmann.github.io/david-dev/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="David Hausmann | Desenvolvedor Front-End" />
+    <meta name="twitter:description" content="Desenvolvedor Front-End especialista em Angular, React e JavaScript. Criando o futuro da web com interfaces modernas e acessíveis." />
+    <meta name="twitter:image" content="./assets/images/perfil.png" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://davidhausmann.github.io/david-dev/" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png" />
+    
+    <!-- Structured Data - JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "David William Hausmann",
+      "jobTitle": "Desenvolvedor Front-End",
+      "description": "Desenvolvedor Front-End com mais de 4 anos de experiência em Angular, React, JavaScript e TypeScript",
+      "url": "https://davidhausmann.github.io/david-dev/",
+      "image": "./assets/images/perfil.png",
+      "sameAs": [
+        "https://www.linkedin.com/in/davidwilliamhausmann/",
+        "https://github.com/DavidHausmann"
+      ],
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelancer"
+      },
+      "knowsAbout": [
+        "JavaScript",
+        "TypeScript",
+        "Angular",
+        "React",
+        "HTML",
+        "CSS",
+        "Front-End Development",
+        "Web Development",
+        "User Interface Design"
+      ]
+    }
+    </script>
+    
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
@@ -16,32 +77,34 @@
   </head>
   <body id="body">
     <script src="modals/curriculum-modal.js" defer></script>
-    <header class="header">
+    <header class="header" role="banner">
       <h1 class="header__title header__title--nav">
-        <a href="#body">David Hausmann</a>
+        <a href="#body" aria-label="Voltar ao topo da página">David Hausmann</a>
       </h1>
       <h1 class="header__title header__title--no-nav">David Hausmann</h1>
-      <nav class="header__nav">
-        <a href="#projects">Projetos</a>
-        <a href="#about">Sobre</a>
-        <a href="#contact">Contato</a>
+      <nav class="header__nav" role="navigation" aria-label="Menu principal">
+        <a href="#projects" aria-label="Ver seção de projetos">Projetos</a>
+        <a href="#about" aria-label="Ver seção sobre mim">Sobre</a>
+        <a href="#contact" aria-label="Ver seção de contato">Contato</a>
       </nav>
-      <button class="header__button" id="open-curriculum">Currículo</button>
+      <button class="header__button" id="open-curriculum" aria-label="Abrir currículo em modal">Currículo</button>
     </header>
     <curriculum-modal id="curriculum-modal"> </curriculum-modal>
-    <main class="main">
-      <section class="main__header">
-        <h3 class="section__title">Desenvolvedor Front-End</h3>
+    <main class="main" role="main">
+      <section class="main__header" aria-labelledby="hero-title">
+        <p class="section__title">Desenvolvedor Front-End</p>
         <div class="main__header__title__area">
-          <h2 class="main__header__title">
+          <h1 class="main__header__title" id="hero-title">
             Criando o
             <span class="main__header__highlight"><br />Futuro<br /></span> da
             <span class="main__header__highlight">WEB</span>
-          </h2>
+          </h1>
           <img
             class="main__header__image"
             src="./assets/images/perfil.png"
-            alt="Minha foto de perfil"
+            alt="Foto de perfil de David Hausmann, desenvolvedor front-end sorrindo"
+            width="200"
+            height="200"
           />
         </div>
         <p class="main__header__subtitle">
@@ -49,16 +112,17 @@
           experiências web acessíveis e responsivas.
         </p>
       </section>
-      <section id="projects" class="main__projects">
-        <h2 class="section__title">Meus Projetos</h2>
+      <section id="projects" class="main__projects" aria-labelledby="projects-title">
+        <h2 class="section__title" id="projects-title">Meus Projetos</h2>
         <p class="section__subtitle">Principais Projetos</p>
-        <div class="main__projects__content">
-          <div class="main__projects__item">
+        <div class="main__projects__content" role="list">
+          <article class="main__projects__item" role="listitem">
             <div class="main__projects__item__image__container">
               <img
                 src="./assets/images/home-nix.png"
-                alt="Redesign NIX Empresa"
+                alt="Screenshot da interface do projeto de redesign NIX Empresa mostrando tema escuro moderno"
                 class="main__projects__image"
+                loading="lazy"
               />
             </div>
             <h3 class="main__projects__item__title">
@@ -69,13 +133,14 @@
               a implementação de um tema escuro para melhorar a experiência do
               usuário.
             </p>
-          </div>
-          <div class="main__projects__item">
+          </article>
+          <article class="main__projects__item" role="listitem">
             <div class="main__projects__item__image__container">
               <img
                 src="./assets/images/design-system.png"
-                alt="Design System - NIX"
+                alt="Componentes do Design System NIX mostrando biblioteca de elementos reutilizáveis"
                 class="main__projects__image"
+                loading="lazy"
               />
             </div>
             <h3 class="main__projects__item__title">Design System - NIX</h3>
@@ -83,13 +148,14 @@
               Projeto de criação de um Design System para a plataforma NIX, com
               foco em componentes reutilizáveis e acessibilidade.
             </p>
-          </div>
-          <div class="main__projects__item">
+          </article>
+          <article class="main__projects__item" role="listitem">
             <div class="main__projects__item__image__container">
               <img
                 src="./assets/images/validador-documentos.png"
-                alt="Projeto Validador de Documentos"
+                alt="Interface do validador de documentos NIX com sistema de verificação de segurança"
                 class="main__projects__image"
+                loading="lazy"
               />
             </div>
             <h3 class="main__projects__item__title">
@@ -100,13 +166,14 @@
               NIX, garantindo a integridade dos documentos com conteúdo bancário
               sensível.
             </p>
-          </div>
-          <div class="main__projects__item">
+          </article>
+          <article class="main__projects__item" role="listitem">
             <div class="main__projects__item__image__container">
               <img
                 src="./assets/images/arquitetura-angular.png"
-                alt="Projeto Arquitetura Angular"
+                alt="Diagrama de arquitetura Angular mostrando estrutura modular de componentes"
                 class="main__projects__image"
+                loading="lazy"
               />
             </div>
             <h3 class="main__projects__item__title">
@@ -118,31 +185,14 @@
               modularidade, reutilização de componentes, boas práticas,
               estrutura de arquivos e performance.
             </p>
-          </div>
-          <div class="main__projects__item">
-            <div class="main__projects__item__image__container">
-              <img
-                src="./assets/images/angular.png"
-                alt="Atualização da versão do Angular"
-                class="main__projects__image"
-              />
-            </div>
-            <h3 class="main__projects__item__title">
-              Atualização de Versão do Angular - NIX Empresa
-            </h3>
-            <p class="main__projects__item__subtitle">
-              Projeto de atualização da versão do framework Angular (v11 -> v15)
-              na plataforma NIX Empresa, garantindo compatibilidade com as
-              bibliotecas utilizadas e aproveitando os novos recursos e
-              melhorias de performance oferecidos pela versão mais recente.
-            </p>
-          </div>
-          <div class="main__projects__item">
+          </article>
+          <article class="main__projects__item" role="listitem">
             <div class="main__projects__item__image__container">
               <img
                 src="./assets/images/hotel-facil.png"
-                alt="Projeto Hotel Fácil"
+                alt="Interface do sistema Hotel Fácil para gestão de reservas hoteleiras"
                 class="main__projects__image"
+                loading="lazy"
               />
             </div>
             <h3 class="main__projects__item__title">
@@ -153,15 +203,15 @@
               plataforma fictícia Hotel Fácil, com foco em usabilidade,
               responsividade e eficiência.
             </p>
-          </div>
+          </article>
         </div>
       </section>
-      <section id="about" class="main__about">
-        <h2 class="section__title">Sobre Mim</h2>
+      <section id="about" class="main__about" aria-labelledby="about-title">
+        <h2 class="section__title" id="about-title">Sobre Mim</h2>
         <p class="section__subtitle">David Hausmann</p>
         <p class="main__about__description">
           Sou um Desenvolvedor Front-End com
-          <span id="experience-years" class="main__about__description"></span>
+          <span id="experience-years"></span>
           anos de experiência em criar interfaces web modernas e responsivas.
           Tenho habilidades em HTML, CSS, JavaScript/TypeScript, Criação de
           Design Systems, Testes Unitários e Angular. Sou formado em Gestão de
@@ -323,37 +373,53 @@
               <a
                 href="https://www.linkedin.com/in/davidwilliamhausmann/"
                 target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Ver perfil completo no LinkedIn (abre em nova aba)"
                 >Ver mais detalhes no meu LinkedIn</a
               >
             </p>
           </div>
         </div>
       </section>
-      <section id="contact" class="main__contact">
-        <h2 class="section__title">Contato</h2>
+      <section id="contact" class="main__contact" aria-labelledby="contact-title">
+        <h2 class="section__title" id="contact-title">Contato</h2>
+        <p class="section__subtitle">Entre em contato comigo</p>
+        <address>
+          <p>Para oportunidades de trabalho ou colaborações, entre em contato através das redes sociais abaixo:</p>
+        </address>
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <p class="footer__content">
         © 2025 David William Hausmann. Todos os direitos reservados.
       </p>
-      <div class="footer__links">
+      <nav class="footer__links" aria-label="Redes sociais">
         <a
           href="https://www.linkedin.com/in/davidwilliamhausmann/"
           class="footer__link"
           target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn - David Hausmann (abre em nova aba)"
           ><img
             src="./assets/images/linkedin.svg"
-            alt="Link para o meu Linkedin"
+            alt="Ícone do LinkedIn"
+            width="32"
+            height="32"
         /></a>
         <a
           href="https://github.com/DavidHausmann"
           class="footer__link"
           target="_blank"
-          ><img src="./assets/images/git.svg" alt="Link para o meu Github"
+          rel="noopener noreferrer"
+          aria-label="GitHub - DavidHausmann (abre em nova aba)"
+          ><img 
+            src="./assets/images/git.svg" 
+            alt="Ícone do GitHub"
+            width="32"
+            height="32"
         /></a>
-      </div>
+      </nav>
     </footer>
 
     <script src="script.js"></script>
