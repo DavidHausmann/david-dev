@@ -395,6 +395,41 @@ a {
 .main .main__contact {
   padding-bottom: 16px;
 }
+.main .main__contact .address__description {
+  font-size: 18px;
+  line-height: 1.625rem;
+  color: #717172;
+  margin-bottom: 24px;
+  font-style: normal;
+}
+.main .main__contact .address__item {
+  align-items: center;
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+.main .main__contact .address__item a {
+  font-size: 14px;
+  line-height: 1.42rem;
+  color: #0a0a0a;
+  font-style: normal;
+}
+.main .main__contact .address__item.address__item--location {
+  font-size: 14px;
+  line-height: 1.42rem;
+  color: #717172;
+  font-style: normal;
+}
+.main .main__contact .address__item::before {
+  content: "";
+  display: inline-block;
+  width: 32px;
+  border-top: 1px solid #0a0a0a;
+  margin-right: 16px;
+}
+.main .main__contact .address__item a:hover {
+  color: #717172;
+}
 .footer {
   padding: 0 24px;
   background-color: #0a0a0a;
