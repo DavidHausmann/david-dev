@@ -80,6 +80,9 @@ class CurriculumModal extends HTMLElement {
                     flex-direction: column;
                     align-items: flex-start;
                     gap: 4px;
+                    & .modal__header__subtitle {
+                      display: none;
+                    }
                 }
                 .modal__header .modal__header__right {
                     display: flex;
@@ -88,6 +91,23 @@ class CurriculumModal extends HTMLElement {
                     align-items: flex-end;
                     max-width: 30%;
                     width: 100%;
+                    & .download__btn {
+                      display: none;
+                    }
+                }
+                .modal__header__subarea {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 24px;
+                    justify-content: space-between;
+                    margin-bottom: 32px;
+                    & p {
+                      font-size: 14px;
+                      line-height: 1.33;
+                      color: var(--secondary-color);
+                      text-align: center;
+                    }
                 }
                 .modal__header .modal__header__title {
                     font-size: 18px;
@@ -388,6 +408,15 @@ class CurriculumModal extends HTMLElement {
                     .modal__content {
                         max-width: 600px;
                     }
+                    .modal__header__subarea {
+                      display: none;
+                    }
+                    .modal__header .modal__header__left .modal__header__subtitle {
+                      display: block;
+                    }
+                    .modal__header .modal__header__right .download__btn {
+                      display: flex;
+                    }
                 }
             </style>
 
@@ -406,6 +435,13 @@ class CurriculumModal extends HTMLElement {
                                 Download PDF
                             </button>
                         </div>
+                    </div>
+                    <div class="modal__header__subarea">
+                        <p class="modal__header__subtitle">Informações detalhadas sobre minhas experiências e qualificações</p>
+                        <button id="download-cv-bottom" class="download__btn" aria-label="Baixar currículo em PDF">
+                          <img src="./assets/images/download.svg" alt="Ícone de download"> 
+                          Download PDF
+                        </button>
                     </div>
                     <div class="custom__scroll">
                       <div class="modal__body">
@@ -571,14 +607,16 @@ class CurriculumModal extends HTMLElement {
 
     const modal = this.shadowRoot.getElementById("modal-container");
     const btnClose = this.shadowRoot.getElementById("close-modal");
-    const btnDownload = this.shadowRoot.getElementById("download-cv");
+    const btnDownload = this.shadowRoot.getElementById("download-cv")
+      ? this.shadowRoot.getElementById("download-cv")
+      : this.shadowRoot.getElementById("download-cv-bottom");
 
     this.downloadCV = () => {
-      const link = document.createElement('a');
-      link.href = './assets/files/cv-davidhausmann.pdf';
-      link.download = 'CV-David-Hausmann.pdf';
-      link.target = '_blank';
-      
+      const link = document.createElement("a");
+      link.href = "./assets/files/cv-davidhausmann.pdf";
+      link.download = "CV-David-Hausmann.pdf";
+      link.target = "_blank";
+
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -596,24 +634,25 @@ class CurriculumModal extends HTMLElement {
     };
 
     this.calculateScrollHeight = () => {
-      const modalContent = this.shadowRoot.querySelector('.modal__content');
-      const modalHeader = this.shadowRoot.querySelector('.modal__header');
-      const customScroll = this.shadowRoot.querySelector('.custom__scroll');
-      
+      const modalContent = this.shadowRoot.querySelector(".modal__content");
+      const modalHeader = this.shadowRoot.querySelector(".modal__header");
+      const customScroll = this.shadowRoot.querySelector(".custom__scroll");
+
       if (modalContent && modalHeader && customScroll) {
         const modalContentHeight = modalContent.offsetHeight;
         const modalHeaderHeight = modalHeader.offsetHeight;
         const modalContentPadding = 60;
         const gap = 32;
-        
-        const availableHeight = modalContentHeight - modalHeaderHeight - modalContentPadding - gap;
+
+        const availableHeight =
+          modalContentHeight - modalHeaderHeight - modalContentPadding - gap;
         customScroll.style.height = `${availableHeight}px`;
         customScroll.style.maxHeight = `${availableHeight}px`;
       }
     };
 
-    window.addEventListener('resize', () => {
-      if (modal.classList.contains('active')) {
+    window.addEventListener("resize", () => {
+      if (modal.classList.contains("active")) {
         setTimeout(() => this.calculateScrollHeight(), 100);
       }
     });
