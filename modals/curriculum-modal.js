@@ -449,11 +449,11 @@ class CurriculumModal extends HTMLElement {
                               <h2 class="modal__body__header__title">David Hausmann</h2>
                               <h3 class="modal__body__header__subtitle">Desenvolvedor Front-End</h3>
                               <div class="modal__body__header__contact">
-                                <img src="../assets/images/keep.svg" alt="Minha localização">
+                                <img src="./assets/images/keep.svg" alt="Minha localização">
                                 <a class="modal__body__header__contact__link modal__body__header__contact__link--location">Santa Catarina, Brasil</a>
                               </div>
                               <div class="modal__body__header__contact">
-                                <img src="../assets/images/mail.svg" alt="Meu email de contato">
+                                <img src="./assets/images/mail.svg" alt="Meu email de contato">
                                 <a
                                     href="mailto:davidwilliamhausmann@gmail.com"
                                     target="_blank"
@@ -465,7 +465,7 @@ class CurriculumModal extends HTMLElement {
                                 </a>
                               </div>
                               <div class="modal__body__header__contact">
-                                <img src="../assets/images/mobile.svg" alt="Meu contato telefônico">
+                                <img src="./assets/images/mobile.svg" alt="Meu contato telefônico">
                                 <a
                                     href="https://wa.me/5548996670688"
                                     target="_blank"
@@ -477,7 +477,7 @@ class CurriculumModal extends HTMLElement {
                                 </a>
                               </div>
                               <div class="modal__body__header__contact">
-                                <img src="../assets/images/link.svg" alt="Meu Linkedin">
+                                <img src="./assets/images/link.svg" alt="Meu Linkedin">
                                 <a
                                     href="https://www.linkedin.com/in/davidwilliamhausmann/"
                                     target="_blank"
@@ -567,7 +567,7 @@ class CurriculumModal extends HTMLElement {
                                     <p class="work__experience__title__header__date">
                                       <img
                                         class="work__experience__title__header__date__icon"
-                                        src="../assets/images/calendar.svg"
+                                        src="./assets/images/calendar.svg"
                                         alt="Data de início e fim da experiência"
                                       />
                                       Jan 2017 - Ago 2022
