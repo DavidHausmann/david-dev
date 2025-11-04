@@ -24,10 +24,28 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     });
+    
   const experienceElement = document.getElementById("experience-years");
   if (experienceElement) {
     experienceElement.textContent = getFrontEndExperienceYears();
   }
+
+  const projectItems = document.querySelectorAll('.main__projects__item');
+  
+  projectItems.forEach((item, index) => {
+    item.addEventListener('click', (e) => {
+      e.preventDefault();
+      
+      const modalId = `projects-modal-${index + 1}`;
+      const projectModal = document.getElementById(modalId);
+      
+      if (projectModal) {
+        projectModal.open();
+      }
+    });
+
+    item.style.cursor = 'pointer';
+  });
 });
 
 function getFrontEndExperienceYears() {

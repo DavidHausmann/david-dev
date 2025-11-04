@@ -98,6 +98,7 @@
   </head>
   <body id="body">
     <script src="modals/curriculum-modal.js" defer></script>
+    <script src="modals/projects-modal.js" defer></script>
     <header class="header" role="banner">
       <h1 class="header__title header__title--nav">
         <a href="#body" aria-label="Voltar ao topo da página">David Hausmann</a>
@@ -117,6 +118,120 @@
       </button>
     </header>
     <curriculum-modal id="curriculum-modal"> </curriculum-modal>
+    <projects-modal id="projects-modal-1">
+      <div class="project__content">
+        <h3>Redesign e Tema Escuro - NIX Empresa</h3>
+        <img
+          src="./assets/images/home-nix.png"
+          alt="Screenshot do projeto NIX Empresa"
+          class="project__image"
+        />
+        <div class="project__about">
+          <h4 class="project__about__title">Sobre o projeto</h4>
+          <p class="project__about__description">
+            Projeto completo de redesign da plataforma NIX Empresa, focando na
+            modernização da interface e implementação de um tema escuro. O
+            projeto envolveu a reestruturação do layout, melhoria da experiência
+            do usuário e implementação de componentes reutilizáveis.
+          </p>
+        </div>
+      </div>
+    </projects-modal>
+    <projects-modal id="projects-modal-2">
+      <div class="project__content">
+        <h3>Design System - NIX</h3>
+        <img
+          src="./assets/images/design-system.png"
+          alt="Screenshot do Design System NIX"
+          class="project__image"
+        />
+        <div class="project__about">
+          <h4 class="project__about__title">Sobre o projeto</h4>
+          <p class="project__about__description">
+            Desenvolvimento de um Design System completo para a plataforma NIX,
+            incluindo componentes reutilizáveis, documentação e guidelines para
+            garantir consistência visual em todos os projetos Front-End da
+            empresa, utilizando Angular Material como base para controle de
+            ações dos componentes.
+          </p>
+        </div>
+      </div>
+    </projects-modal>
+    <projects-modal id="projects-modal-3">
+      <div class="project__content">
+        <h3>Validador de Documentos - NIX</h3>
+        <img
+          src="./assets/images/validador-documentos.png"
+          alt="Screenshot do Validador de Documentos"
+          class="project__image"
+        />
+        <div class="project__about">
+          <h4 class="project__about__title">Sobre o projeto</h4>
+          <p class="project__about__description">
+            Sistema de validação de documentos bancários com foco em segurança e
+            integridade dos dados. Implementação de algoritmos de validação,
+            interface intuitiva e feedback em tempo real para o usuário.
+          </p>
+        </div>
+      </div>
+    </projects-modal>
+    <projects-modal id="projects-modal-4">
+      <div class="project__content">
+        <h3>Arquitetura de Aplicações Front-End - Angular</h3>
+        <img
+          src="./assets/images/arquitetura-angular.png"
+          alt="Diagrama de arquitetura Angular"
+          class="project__image"
+        />
+        <div class="project__about">
+          <h4 class="project__about__title">Sobre o projeto</h4>
+          <p class="project__about__description">
+            Estudo e implementação de padrões arquiteturais para aplicações
+            Angular escaláveis. Foco em modularidade, lazy loading, state
+            management e boas práticas de organização de código.
+          </p>
+        </div>
+      </div>
+    </projects-modal>
+    <projects-modal id="projects-modal-5">
+      <div class="project__content">
+        <h3>Atualização de Framework Angular - NIX Empresa</h3>
+        <img
+          src="./assets/images/angular.png"
+          alt="Logo do Angular"
+          class="project__image"
+        />
+        <div class="project__about">
+          <h4 class="project__about__title">Sobre o projeto</h4>
+          <p class="project__about__description">
+            Projeto de migração da plataforma NIX do Angular v11 para v15,
+            incluindo atualização de dependências, refatoração de código
+            deprecado e implementação de novas funcionalidades do framework.
+          </p>
+        </div>
+      </div>
+    </projects-modal>
+    <projects-modal id="projects-modal-6">
+      <div class="project__content">
+        <h3>Gestão de Reservas Hoteleiras - Hotel Fácil</h3>
+        <img
+          src="./assets/images/hotel-facil.png"
+          alt="Screenshot do sistema Hotel Fácil"
+          class="project__image"
+        />
+        <div class="project__about">
+          <h4 class="project__about__title">Sobre o projeto</h4>
+          <p class="project__about__description">
+            Desenvolvimento de um sistema completo para gestão de reservas
+            hoteleiras, com foco na experiência do usuário e na eficiência
+            operacional. Utilização de tecnologias modernas para garantir
+            performance e escalabilidade. Sistema de cadastro de hóspedes e
+            reservas utilizando Java com Spring Boot no back-end e Angular no
+            front-end.
+          </p>
+        </div>
+      </div>
+    </projects-modal>
     <main class="main" role="main">
       <section class="main__header" aria-labelledby="hero-title">
         <p class="section__title">Desenvolvedor Front-End</p>
@@ -215,6 +330,24 @@
               aplicações Front-End utilizando o framework Angular, focando em
               modularidade, reutilização de componentes, boas práticas,
               estrutura de arquivos e performance.
+            </p>
+          </article>
+          <article class="main__projects__item" role="listitem">
+            <div class="main__projects__item__image__container">
+              <img
+                src="./assets/images/angular.png"
+                alt="Imagem referente ao projeto de atualização do framework Angular na plataforma NIX Empresa"
+                class="main__projects__image"
+                loading="lazy"
+              />
+            </div>
+            <h3 class="main__projects__item__title">
+              Atualização de Framework Angular - NIX Empresa
+            </h3>
+            <p class="main__projects__item__subtitle">
+              Projeto de atualização do framework Angular (v11 -> v15) na
+              plataforma NIX, visando melhorias de performance, usabilidade e
+              integração com novas tecnologias.
             </p>
           </article>
           <article class="main__projects__item" role="listitem">
